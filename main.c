@@ -55,13 +55,13 @@ int main(void) {
 	DataProcess();
 	
 	fp = fopen ("Amp.txt", "w+");
-	for(j = 0; j < r_size; j++)
+	for(j = 0; j < 50; j++)
 	{
-		for(i = 0; i < t_size - 1; i++)
+		for(i = 0; i < 39; i++)
 		{
-			fprintf(fp, "%f\t", FRE_Amp[t_size*i + j]);
+			fprintf(fp, "%f\t", FRE_Amp[j*40 + i]);
 		}
-		fprintf(fp, "%f\r\n", FRE_Amp[t_size*(i+1)-1]);
+		fprintf(fp, "%f\r\n", FRE_Amp[j*40 + 39]);
 	}
 	
 //	for(i = 0; i < g_size; i++) 
